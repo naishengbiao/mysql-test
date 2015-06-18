@@ -38,6 +38,8 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.set(require('./Test.js').start());
+
 app.use('/', routes);
 app.use('/users', users);
 
